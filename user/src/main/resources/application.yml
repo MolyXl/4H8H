@@ -1,0 +1,40 @@
+server:
+  port: 7101
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:7071/eureka/,http://${eureka.instance.hostname}:7072/eureka/
+      #client连接Eureka服务端后的空闲等待时间，默认为30 秒
+      eureka-connection-idle-timeout-seconds: 30
+      #client连接eureka服务端的连接超时时间，默认为5秒
+      eureka-server-connect-timeout-seconds: 5
+      #client对服务端的读超时时长
+      eureka-server-read-timeout-seconds: 8
+      #client连接all eureka服务端的总连接数，默认200
+      eureka-server-total-connections: 200
+      #client连接eureka服务端的单机连接数量，默认50
+      eureka-server-total-connections-per-host: 50
+      #执行程序指数回退刷新的相关属性，是重试延迟的最大倍数值，默认为10
+      cache-refresh-executor-exponential-back-off-bound: 10
+      #执行程序缓存刷新线程池的大小，默认为5
+      cache-refresh-executor-thread-pool-size: 2
+      #心跳执行程序回退相关的属性，是重试延迟的最大倍数值，默认为10
+      heartbeat-executor-exponential-back-off-bound: 10
+      #心跳执行程序线程池的大小,默认为5
+      heartbeat-executor-thread-pool-size: 5
+      # 询问Eureka服务url信息变化的频率（s），默认为300秒
+      eureka-service-url-poll-interval-seconds: 300
+      #最初复制实例信息到eureka服务器所需的时间（s），默认为40秒
+      initial-instance-info-replication-interval-seconds: 40
+      #间隔多长时间再次复制实例信息到eureka服务器，默认为30秒
+      instance-info-replication-interval-seconds: 30
+      #从eureka服务器注册表中获取注册信息的时间间隔（s），默认为30秒
+      registry-fetch-interval-seconds: 30
+spring:
+  application:
+    name: user

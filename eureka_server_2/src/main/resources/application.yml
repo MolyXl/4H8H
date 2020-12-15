@@ -1,0 +1,19 @@
+server:
+  port: 7072
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: false
+    app-group-name: eureka_server
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:7071/eureka/
+spring:
+  application:
+    name: eureka-server-2
+  security:
+    user:
+      name: macro
+      password: 123456

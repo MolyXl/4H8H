@@ -14,19 +14,7 @@ spring:
     name: user
 feign:
   hystrix:
-    enabled: true #开启hystrix
-  client:
-    config:
-      bill:
-        loggerLevel: FULL
-  compression:
-    request:
-      enabled: true
-      mime-types: application/json
-      min-request-size: 1024
-    response:
-      enabled: true
-      useGzipDecoder: true
+    enabled: true
 logging:
   level:
     com.shbh.user.feign.BillFeign: debug

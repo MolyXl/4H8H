@@ -13,6 +13,8 @@ spring:
   application:
     name: user
 feign:
+  hystrix:
+    enabled: true #开启hystrix
   client:
     config:
       bill:

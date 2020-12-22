@@ -18,8 +18,8 @@ public class TestController {
     public Map getMap(HttpServletRequest request) {
         int serverPort = request.getServerPort();
         HashMap hashMap = new HashMap(16);
-        hashMap.put("aa",23);
-        hashMap.put("serverPort",serverPort);
+        hashMap.put("aa", 23);
+        hashMap.put("serverPort", serverPort);
         return hashMap;
     }
 }

@@ -13,11 +13,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>bill</module>
         <module>common</module>
         <module>eureka_server_1</module>
         <module>eureka_server_2</module>
         <module>user</module>
-        <module>bill</module>
+        <module>turbine</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Map;
 
-@FeignClient(value = "bill",fallback = BillFeignCallBack.class)
+@FeignClient(value = "bill", fallback = BillFeignCallBack.class)
 public interface BillFeign {
     @RequestMapping(value = "/test/getMap", method = RequestMethod.GET)
     Map getMap();

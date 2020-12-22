@@ -25,8 +25,14 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 5000
+      circuitBreaker:
+        requestVolumeThreshold: 10
+        sleepWindowInMilliseconds: 10000
+        errorThresholdPercentage: 50
+  dashboard:
+    proxy-stream-allow-list: 127.0.0.1
 management:
   endpoints:
     web:
       exposure:
-        include: 'hystrix.stream'
+        include: "*"

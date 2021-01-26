@@ -11,7 +11,7 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9091/eureka/
 spring:
   application:
-    name: user
+    name: sentinel
 feign:
   hystrix:
     enabled: true

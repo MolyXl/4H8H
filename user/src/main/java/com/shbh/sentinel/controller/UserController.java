@@ -1,6 +1,6 @@
-package com.shbh.user.controller;
+package com.shbh.sentinel.controller;
 
-import com.shbh.user.feign.BillFeign;
+import com.shbh.sentinel.feign.BillFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

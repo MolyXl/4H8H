@@ -1,0 +1,27 @@
+server:
+  port: 9092
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9091/eureka/
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      eager: true
+      datasource:
+        ds1:
+          file:
+            file: classpath:flowrule.json
+            data-type: json
+            rule-type: flow
+  application:
+    name: sentinel
+feign:
+  sentinel:
+    enabled: true

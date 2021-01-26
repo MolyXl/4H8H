@@ -1,6 +1,6 @@
-package com.shbh.user.feign;
+package com.shbh.sentinel.feign;
 
-import com.shbh.user.feign.impl.BillFeignCallBack;
+import com.shbh.sentinel.feign.impl.BillFeignCallBack;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

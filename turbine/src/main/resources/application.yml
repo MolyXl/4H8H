@@ -16,7 +16,7 @@ hystrix:
   dashboard:
     proxy-stream-allow-list: 127.0.0.1
 turbine:
-  app-config: user
+  app-config: sentinel
   cluster-name-expression: "'default'"
 management:
   endpoints:

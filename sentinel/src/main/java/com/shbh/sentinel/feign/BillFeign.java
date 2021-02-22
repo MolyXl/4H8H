@@ -10,6 +10,6 @@ import java.util.Map;
 
 @FeignClient(value = "bill",fallback = BillFeignCallBack.class)
 public interface BillFeign {
-    @RequestMapping(value = "/test/getMap", method = RequestMethod.GET)
+    @RequestMapping(value = "/bill/getMap", method = RequestMethod.GET)
     Map getMap(@RequestParam("billId") Integer billId);
 }

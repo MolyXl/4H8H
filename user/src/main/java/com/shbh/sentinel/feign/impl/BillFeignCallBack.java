@@ -9,7 +9,7 @@ import java.util.Map;
 @Component
 public class BillFeignCallBack implements BillFeign {
     @Override
-    public Map getMap() {
+    public Map getMap(Integer billId) {
         System.out.println("feign熔断降级");
         HashMap hashMap = new HashMap(1);
         hashMap.put("chufa", "feign熔断降级");

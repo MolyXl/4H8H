@@ -11,7 +11,27 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9091/eureka/
 spring:
   application:
-    name: sentinel
+    name: user
+  zipkin:
+    #base-url: http://127.0.0.1:9411/ #http发送
+    sender:
+      #type: web
+      type: rabbit
+    sleuth:
+      sampler:
+        probability: 1
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+      listener: # 这里配置了重试策略
+        direct:
+          retry:
+            enabled: true
+        simple:
+          etry:
+            enabled: true
 feign:
   hystrix:
     enabled: true

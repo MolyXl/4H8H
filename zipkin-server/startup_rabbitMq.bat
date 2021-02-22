@@ -1,0 +1,1 @@
+java -jar zipkin-server-2.12.9-exec.jar  --RABBIT_ADDRESSES=127.0.0.1:5672

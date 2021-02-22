@@ -11,19 +11,17 @@ import java.util.Map;
 /**
  * @author Mazhuli
  */
-@RequestMapping("/test")
 @RestController
 public class UserController {
     @Autowired
     private BillFeign billFeign;
 
     @RequestMapping(value = "/getMap", method = RequestMethod.GET)
-    public Map getMap() {
-        return billFeign.getMap();
+    public Map getMap(Integer billId) {
+        if (billId.equals(1)) {
+            throw new RuntimeException("1异常");
+        }
+        return billFeign.getMap(billId);
     }
 
-    @RequestMapping(value = "/getDefaultMap", method = RequestMethod.GET)
-    public Map getDefaultMap() {
-        return billFeign.getMap();
-    }
 }

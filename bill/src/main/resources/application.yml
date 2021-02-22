@@ -11,3 +11,23 @@ eureka:
 spring:
   application:
     name: bill
+  zipkin:
+    #base-url: http://127.0.0.1:9411/ #http发送
+    sender:
+      #type: web
+      type: rabbit
+    sleuth:
+      sampler:
+        probability: 1
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+      listener: # 这里配置了重试策略
+        direct:
+          retry:
+            enabled: true
+        simple:
+          etry:
+            enabled: true

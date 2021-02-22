@@ -1,0 +1,20 @@
+server:
+  port: 9070
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    #user-service:
+      #path: /user/**
+      #url: http://127.0.0.1:9050/
+      #serviceId: sentinel
+    sentinel: /user/**
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9091/eureka/

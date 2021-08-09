@@ -11,10 +11,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author Mazhuli
  */
 @SpringBootApplication
-@EnableEurekaClient
-@EnableFeignClients
-@EnableHystrixDashboard
-@EnableCircuitBreaker
+//@EnableEurekaClient
+//@EnableFeignClients
+//@EnableHystrixDashboard
+//@EnableCircuitBreaker
 public class UserApplication {
 
     public static void main(String[] args) {

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shbh.sentinel.mapper.ExchangeRewardDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.shbh.sentinel.entity.ExchangeRewardDetail">
+        <id column="id" property="id" />
+        <result column="exchange_id" property="exchangeId" />
+        <result column="amount" property="amount" />
+        <result column="create_time" property="createTime" />
+        <result column="admin_id" property="adminId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, exchange_id, amount, create_time, admin_id
+    </sql>
+
+</mapper>

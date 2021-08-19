@@ -7,11 +7,24 @@ spring:
     gateway:
       #手动配置路由
       routes:
-        - id: user
+        - id: users
           #uri: http://127.0.0.1:9090/
-          uri: lb://user
+          uri: lb://users
           predicates:
-            - Path=/user/**
+            - Path=/users/**
+          filters:
+            #- StripPrefix=1
+            #- name: RequestRateLimiter
+            #args:
+            #redis-rate-limiter.replenishRate: 1
+            #redis-rate-limiter.burstCapacity: 2
+            #key-resolver: "#{@pathKeyResolver}"
+            - RewritePath=/users/(?<segment>.*),/$\{segment}
+        - id: admin
+          #uri: http://127.0.0.1:9090/
+          uri: lb://admin
+          predicates:
+            - Path=/admin/**
           filters:
             #- StripPrefix=1
             #- name: RequestRateLimiter
@@ -19,14 +32,14 @@ spring:
                 #redis-rate-limiter.replenishRate: 1
                 #redis-rate-limiter.burstCapacity: 2
                 #key-resolver: "#{@pathKeyResolver}"
-            - RewritePath=/user/(?<segment>.*),/$\{segment}
+            - RewritePath=/admin/(?<segment>.*),/$\{segment}
       #根据服务名自动转发
-      #discovery:
-        #locator:
-          #enabled: true
-          #lower-case-service-id: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
   redis:
-    host: 127.0.0.1
+    host: 39.105.29.35
     port: 6379
     database: 0
   zipkin:

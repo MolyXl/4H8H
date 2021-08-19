@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shbh.sentinel.mapper.ArticleRewardDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.shbh.sentinel.entity.ArticleRewardDetail">
+        <id column="id" property="id" />
+        <result column="article_id" property="articleId" />
+        <result column="amount" property="amount" />
+        <result column="create_time" property="createTime" />
+        <result column="pay_type" property="payType" />
+        <result column="pay_status" property="payStatus" />
+        <result column="pay_time" property="payTime" />
+        <result column="pay_user_id" property="payUserId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, article_id, amount, create_time, pay_type, pay_status, pay_time, pay_user_id
+    </sql>
+
+</mapper>

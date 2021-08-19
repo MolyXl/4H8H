@@ -31,3 +31,6 @@ spring:
         simple:
           etry:
             enabled: true
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:8070

@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+/admin/.gitignore
+/.txlcn/admin-9090.mv.db
+/admin/.mvn/wrapper/maven-wrapper.properties
+/admin/.mvn/wrapper/MavenWrapperDownloader.java
+/admin/mvnw
+/admin/mvnw.cmd
+/.txlcn/users-9091.mv.db

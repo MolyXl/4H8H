@@ -4,8 +4,7 @@ package com.shbh.article.controller;
 import com.shbh.article.service.IArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -15,7 +14,7 @@ import org.springframework.stereotype.Controller;
  * @author MaZhuli
  * @since 2021-08-18
  */
-@Controller
+@RestController
 @RequestMapping("/article")
 public class ArticleController {
 

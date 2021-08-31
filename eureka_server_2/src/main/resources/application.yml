@@ -2,7 +2,7 @@ server:
   port: 9081
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 39.105.29.35
     prefer-ip-address: true
   client:
     registerWithEureka: true

@@ -31,6 +31,7 @@
         <java.version>1.8</java.version>
         <!-- 最新版本不能触发Hystrix熔断,未找到原因-->
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
+        <docker.image.prefix>4h8h</docker.image.prefix>
     </properties>
     <dependencies>
         <!--<dependency>

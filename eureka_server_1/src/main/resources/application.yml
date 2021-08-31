@@ -2,7 +2,7 @@ server:
   port: 9080
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 39.105.29.35
     prefer-ip-address: true         #是否优先使用ip
   client:
     registerWithEureka: true  #是否注册自己

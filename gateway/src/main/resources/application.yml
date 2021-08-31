@@ -64,7 +64,7 @@ spring:
           enabled: true
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 39.105.29.35
     prefer-ip-address: true
   client:
     enabled: true

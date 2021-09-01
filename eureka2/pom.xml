@@ -7,10 +7,11 @@
         <groupId>com.shbh</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>eureka_server_1</artifactId>
+    <artifactId>eureka2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka_server_1</name>
-    <description>服务注册中心-1</description>
+    <name>eureka2</name>
+    <description>服务注册中心-2</description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -26,7 +27,6 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                     <imageTags>
@@ -38,7 +38,7 @@
                     <cmd>["java", "-version"]</cmd>
                     <entryPoint>["java", "-jar", "${project.build.finalName}.jar"]
                     </entryPoint>
-                    <dockerHost>http://39.105.29.35:2375</dockerHost>
+                    <dockerHost>http://127.0.0.1:2375</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/ROOT</targetPath>

@@ -7,11 +7,10 @@
         <groupId>com.shbh</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>eureka_server_2</artifactId>
+    <artifactId>eureka1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka_server_2</name>
-    <description>服务注册中心-2</description>
-
+    <name>eureka1</name>
+    <description>服务注册中心-1</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -39,7 +38,7 @@
                     <cmd>["java", "-version"]</cmd>
                     <entryPoint>["java", "-jar", "${project.build.finalName}.jar"]
                     </entryPoint>
-                    <dockerHost>http://39.105.29.35:2375</dockerHost>
+                    <dockerHost>http://127.0.0.1:2375</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/ROOT</targetPath>

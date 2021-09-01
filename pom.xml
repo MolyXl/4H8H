@@ -15,8 +15,8 @@
     <modules>
         <module>bill</module>
         <module>common</module>
-        <module>eureka_server_1</module>
-        <module>eureka_server_2</module>
+        <module>eureka1</module>
+        <module>eureka2</module>
         <module>admin</module>
         <module>sentinel</module>
         <module>turbine</module>

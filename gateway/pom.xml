@@ -77,7 +77,7 @@
                     <cmd>["java", "-version"]</cmd>
                     <entryPoint>["java", "-jar", "${project.build.finalName}.jar"]
                     </entryPoint>
-                    <dockerHost>http://39.105.29.35:2375</dockerHost>
+                    <dockerHost>http:/127.0.0.1:2375</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/ROOT</targetPath>

@@ -20,7 +20,6 @@
         <module>admin</module>
         <module>sentinel</module>
         <module>turbine</module>
-        <module>sentinel_server</module>
         <module>zuul</module>
         <module>gateway</module>
         <module>users</module>

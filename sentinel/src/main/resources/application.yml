@@ -2,17 +2,17 @@ server:
   port: 9050
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 39.105.29.35
     prefer-ip-address: true
   client:
     enabled: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9091/eureka/
+      defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9081/eureka/
 spring:
   cloud:
     sentinel:
       transport:
-        dashboard: localhost:8080
+        dashboard: localhost:7070
       eager: true
       datasource:
         ds1:

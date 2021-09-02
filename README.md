@@ -9,3 +9,4 @@
     Zuul port 9070
     Admin port 9090
     Bill port 9091
+    Sentinel_Dashboard port 7070

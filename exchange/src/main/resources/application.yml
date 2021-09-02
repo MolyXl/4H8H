@@ -8,12 +8,12 @@ server:
 #  client:
 #    enabled: true
 #    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9091/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9081/eureka/
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://39.105.29.35:3306/4h8h?useUnicode=true&characterEncoding=UTF-8&ENGINE=InnoDB
+    url: jdbc:mysql://47.93.126.61:3306/4h8h?useUnicode=true&characterEncoding=UTF-8&ENGINE=InnoDB
     username: root
     password: mylord
 

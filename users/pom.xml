@@ -78,7 +78,12 @@
             <artifactId>mybatis-plus-extension</artifactId>
             <version>3.1.0</version>
         </dependency>
-        <!--lcn依赖-->
+        <!--sentinel-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <version>2.2.3.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>com.shbh</groupId>
             <artifactId>common</artifactId>

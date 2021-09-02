@@ -33,14 +33,14 @@ public class UserController {
     @Transactional(rollbackFor = Exception.class)
     @RequestMapping(value = "/getMap", method = RequestMethod.GET)
     public Map getMap(@RequestParam("billId") Integer billId) {
-        User user = new User();
+        /*User user = new User();
         user.setGender(1);
         user.setEmailAddress("99999@qq.com");
         user.setRegTime(new Date());
         userService.save(user);
         if (billId.equals(3)) {
             throw new RuntimeException("回滚吧");
-        }
+        }*/
         HashMap hashMap = new HashMap(16);
         hashMap.put("aa", 23);
         return hashMap;

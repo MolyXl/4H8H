@@ -8,5 +8,5 @@
     Turbine port 9040
     Zuul port 9070
     Admin port 9090
-    Bill port 9091
+    User port 9010
     Sentinel_Dashboard port 7070

@@ -11,12 +11,13 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:9080/eureka/,http://${eureka.instance.hostname}:9081/eureka/
 tx-lcn:
   client:
-    manager-address: 127.0.0.1:8070
+    manager-address: 39.105.29.35:8070
   manager:
     dtx-time: 600000
 spring:
   cloud:
     sentinel:
+      web-context-unify: false
       transport:
         dashboard: localhost:7070
       eager: true

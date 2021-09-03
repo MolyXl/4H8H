@@ -20,6 +20,7 @@ spring:
             file: classpath:flowrule.json
             data-type: json
             rule-type: flow
+      web-context-unify: false
   application:
     name: sentinel
 feign:
